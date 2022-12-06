@@ -68,6 +68,7 @@ public class DataBase {
     }
 
     public List<Account> getTop3AccountsUsingStream() {
+        // Alternate Approach using streams for sorting
         return db.values().stream()
                 .sorted(transactionsComparator)
                 .sorted(balanceComparator)
